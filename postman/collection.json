@@ -213,7 +213,8 @@
                   "// 7. Value test\r",
                   "pm.test(\"Chained ID matches\", () => {\r",
                   "    const id = pm.environment.get(\"firstPostId\");\r",
-                  "    pm.expect(pm.response.json().id).to.eql(id);\r",
+                  "    // Number болгож хөрвүүлэх\r",
+                  "    pm.expect(pm.response.json().id).to.eql(Number(id));\r",
                   "});"
                 ],
                 "type": "text/javascript",
